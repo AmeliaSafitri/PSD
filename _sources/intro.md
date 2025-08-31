@@ -1,11 +1,14 @@
-# Welcome to your Jupyter Book
+# Welcome to Amelia’s Jupyter Book
+Ini adalah Jupyter Book Amelia yang berisi tentang materi Proyek Sain Data Semester 5
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Mata kuliah “Proyek Sains Data” adalah mata kuliah yang dirancang untuk memberikan pengalaman langsung dalam menerapkan konsep-konsep sains data pada dunia nyata.
 
-Check out the content pages bundled with this sample book to see more.
+Semoga materi ini dapat bermanfaat bagi para pembaca
 
-```{tableofcontents}
-```
+NAMA    : AMELIA SAFITRI
+
+NIM     : 230411100039
+
+PRODI   : TEKNIK INFORMATIKA
+
+EMAIL   : safitriamelia3055@gmail.com
