@@ -60,6 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Eksplorasi_Data';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Transformasi Data" href="Transformasi_Data.html" />
     <link rel="prev" title="Data Understanding" href="Data_Understanding.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -184,6 +185,7 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Eksplorasi Data</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="Transformasi_Data.html">Transformasi Data</a></li>
 </ul>
 
     </div>
@@ -439,6 +441,7 @@ document.write(`
 </section>
 <section id="distribusi-kelas-target">
 <h2>Distribusi Kelas (Target)<a class="headerlink" href="#distribusi-kelas-target" title="Link to this heading">#</a></h2>
+<p>Distribusi kelas artinya seberapa banyak data yang dimiliki setiap kategori target.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
@@ -449,7 +452,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_8608/1247754024.py:2: FutureWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_19269/1247754024.py:2: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
@@ -468,6 +471,7 @@ Passing `palette` without assigning `hue` is deprecated and will be removed in v
 </section>
 <section id="histogram-distribusi-fitur">
 <h2>Histogram Distribusi Fitur<a class="headerlink" href="#histogram-distribusi-fitur" title="Link to this heading">#</a></h2>
+<p>Histogram adalah grafik batang yang menunjukkan sebaran (distribusi) nilai dari suatu variabel/fitur.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">)</span>
@@ -480,15 +484,49 @@ Passing `palette` without assigning `hue` is deprecated and will be removed in v
 <img alt="_images/c27641134fce032ba53815eb544971be7153351eb133d28def6f6bdb608a019f.png" src="_images/c27641134fce032ba53815eb544971be7153351eb133d28def6f6bdb608a019f.png" />
 </div>
 </div>
-<p>Fungsi:</p>
+<p>Penjelasan :</p>
+<ol class="arabic simple">
+<li><p>Sepal Length (cm)</p></li>
+</ol>
 <ul class="simple">
-<li><p>Membuat histogram tiap fitur (sepal length, sepal width, dll).</p></li>
-<li><p>Berguna melihat sebaran nilai (apakah normal, skewed, dll).</p></li>
-<li><p>Hasil: 4 histogram untuk masing-masing fitur.</p></li>
+<li><p>Sebaran 4.5 – 8 cm.</p></li>
+<li><p>Tidak ada pemisahan yang terlalu jelas antar kelompok, distribusinya agak rata.</p></li>
+<li><p>Artinya panjang sepal kurang bagus untuk membedakan spesies, karena nilainya saling tumpang tindih.</p></li>
 </ul>
+<ol class="arabic simple" start="2">
+<li><p>Sepal Width (cm)</p></li>
+</ol>
+<ul class="simple">
+<li><p>Sebaran 2 – 4.5 cm.</p></li>
+<li><p>Puncak data ada di sekitar 3 cm.</p></li>
+<li><p>Distribusi agak miring ke kanan.</p></li>
+<li><p>Sama seperti sepal length, fitur ini tidak bisa sepenuhnya memisahkan spesies karena banyak overlap (saling tumpang tindih / menempati rentang nilai yang sama)</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Petal Length (cm)</p></li>
+</ol>
+<ul class="simple">
+<li><p>Sebaran 1 – 7 cm.</p></li>
+<li><p>Terlihat dua kelompok jelas: a) Kelompok pertama di 1 – 2 cm → ini pasti Setosa. b) Kelompok kedua di 4 – 6 cm → campuran Versicolor &amp; Virginica.</p></li>
+<li><p>Artinya petal length sangat efektif membedakan Setosa dari spesies lain.</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Petal Width (cm)</p></li>
+</ol>
+<ul class="simple">
+<li><p>Sebaran 0 – 2.5 cm.</p></li>
+<li><p>Terlihat 3 kelompok: a) 0 – 0.5 cm → Setosa. b) 1 – 1.5 cm → Versicolor. c) 1.5 – 2.5 cm → Virginica.</p></li>
+<li><p>Jadi petal width adalah fitur terbaik untuk membedakan ketiga spesies iris.</p></li>
+</ul>
+<p><strong>Kesimpulan dari histogram</strong></p>
+<ol class="arabic simple">
+<li><p>Sepal length &amp; sepal width → kurang jelas untuk pemisahan antar spesies.</p></li>
+<li><p>Petal length &amp; petal width → sangat membantu klasifikasi karena distribusi antar spesies lebih terpisah.</p></li>
+</ol>
 </section>
 <section id="heatmap-korelasi">
 <h2>Heatmap Korelasi<a class="headerlink" href="#heatmap-korelasi" title="Link to this heading">#</a></h2>
+<p>Heatmap Korelasi adalah tabel visual yang menampilkan hubungan antar fitur dalam bentuk warna.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
@@ -585,6 +623,15 @@ Passing `palette` without assigning `hue` is deprecated and will be removed in v
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Data Understanding</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Transformasi_Data.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Transformasi Data</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
