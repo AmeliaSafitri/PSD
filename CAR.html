@@ -1,0 +1,1244 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Project UAS &#8212; Welcome to Amelia&#39;s Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'CAR';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Dynamic Time Wrapping" href="DTW.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/amelia.jpg" class="logo__image only-light" alt="Welcome to Amelia's Jupyter Book - Home"/>
+    <script>document.write(`<img src="_static/amelia.jpg" class="logo__image only-dark" alt="Welcome to Amelia's Jupyter Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to Amelia’s Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Business_Problem.html">Business Problem</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Data_Understanding.html">Data Understanding</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Eksplorasi_Data.html">Eksplorasi Data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="Transformasi_Data.html">Transformasi Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Anomaly_Detection.html">Data Preprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Penyeimbangan_dataset.html">Penyeimbangan dataset (SMOTE, ADASYN)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="timeseries.html">Time Series Dataset untuk Prediksi</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Deploy_Timeseries.html">DEPLOYMENT SYSTEM TIMESERIES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deploy_suara.html">Deploy Identifikasi Suara Buka dan    Tutup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2uservoicerecording.html">Sistem Identifikasi Suara</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="DTW.html">Dynamic Time Wrapping</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project UAS</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FCAR.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/CAR.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project UAS</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-dataset"><strong>PENJELASAN DATASET</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#business-undertanding">BUSINESS UNDERTANDING</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-proyek">TUJUAN PROYEK</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-analsis">TUJUAN ANALSIS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-understanding-eksplorasi-data-eda">DATA UNDERSTANDING (Eksplorasi Data/EDA)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengupload-data">Mengupload Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data">Visualisasi Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data">Preprocessing Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-data">Pemodelan Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi">Evaluasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-hasil-confusion-matrix-f1-score">Visualisasi Hasil (Confusion Matrix &amp; F1-Score)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment"><strong>DEPLOYMENT</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#struktur-file">Struktur File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-txt">requirements.txt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data-py">load_data.py</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-svc-py-pelatihan-model-penyimpanan">model_svc.py (Pelatihan Model &amp; Penyimpanan)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app-py-aplikasi-streamlit-interaktif">app.py (Aplikasi Streamlit Interaktif)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-deploy">LINK DEPLOY</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="project-uas">
+<h1>Project UAS<a class="headerlink" href="#project-uas" title="Link to this heading">#</a></h1>
+<p><a class="reference external" href="https://www.timeseriesclassification.com/description.php?Dataset=Car">https://www.timeseriesclassification.com/description.php?Dataset=Car</a></p>
+<section id="penjelasan-dataset">
+<h2><strong>PENJELASAN DATASET</strong><a class="headerlink" href="#penjelasan-dataset" title="Link to this heading">#</a></h2>
+<p>Data tersebut berupa garis besar empat jenis mobil berbeda yang diekstraksi dari video lalu lintas menggunakan informasi gerak. Citra tersebut dipetakan ke dalam seri 1-D (berdasarkan fitur gerak dan bentuk). Kendaraan-kendaraan tersebut diklasifikasikan ke dalam salah satu dari empat kelas: sedan, pikap, minivan, atau SUV.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Kolom</p></th>
+<th class="head"><p>Arti / Makna</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Train Size (60)</strong></p></td>
+<td><p>Jumlah data <strong>pelatihan</strong> (training set) adalah <strong>60 sampel</strong> time series. Model dilatih menggunakan 60 data ini.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Test Size (60)</strong></p></td>
+<td><p>Jumlah data <strong>pengujian</strong> (test set) adalah <strong>60 sampel</strong> time series. Setelah model dilatih, ia diuji pada 60 data ini.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Length (577)</strong></p></td>
+<td><p>Panjang setiap time series adalah <strong>577 titik data</strong> (misalnya 577 waktu, 577 sensor reading). Artinya tiap sampel berupa urutan angka sepanjang 577.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Number of Classes (4)</strong></p></td>
+<td><p>Dataset memiliki <strong>4 kelas</strong> yang berbeda. Artinya model akan melakukan <strong>klasifikasi 4 kategori</strong>. Contoh: 4 jenis gerakan, 4 tipe sinyal, 4 label aktivitas, dll.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Number of Dimensions (1)</strong></p></td>
+<td><p>Setiap titik pada time series hanya memiliki <strong>1 fitur</strong>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                                                                                                                                                                 |
+</pre></div>
+</div>
+</section>
+<section id="business-undertanding">
+<h2>BUSINESS UNDERTANDING<a class="headerlink" href="#business-undertanding" title="Link to this heading">#</a></h2>
+<p><strong>Konteks:</strong></p>
+<p>Proyek ini beroperasi dalam domain klasifikasi objek atau pengenalan pola, dalam hal ini, klasifikasi tipe kendaraan.</p>
+<p><strong>Permasalahan (Problem Statement):</strong></p>
+<p>Dalam industri otomotif, logistik, atau asuransi, seringkali diperlukan cara cepat dan akurat untuk mengidentifikasi dan mengkategorikan tipe kendaraan (Sedan, SUV, Pickup, Minivan, dll.) berdasarkan serangkaian atribut teknis (dimensi, bobot, spesifikasi mesin, dll.). Proses identifikasi manual dapat memakan waktu, rentan kesalahan, dan tidak efisien untuk volume data yang besar.</p>
+<p><strong>Kebutuhan Bisnis:</strong></p>
+<p>Menciptakan sistem yang otomatis, cepat, dan konsisten yang dapat menerima data atribut kendaraan sebagai input dan mengeluarkan tipe kendaraan yang benar sebagai output.</p>
+</section>
+<section id="tujuan-proyek">
+<h2>TUJUAN PROYEK<a class="headerlink" href="#tujuan-proyek" title="Link to this heading">#</a></h2>
+<p><strong>Pengembangan Model:</strong></p>
+<p>Berhasil melatih model Support Vector Classifier (SVC) yang efektif untuk mengklasifikasi 4 tipe mobil yang berbeda.</p>
+<p><strong>Standardisasi Data:</strong></p>
+<p>Mengembangkan pipeline preprocessing yang konsisten (terutama scaling fitur) yang diterapkan selama training dan deployment.</p>
+<p><strong>Serialisasi Model:</strong></p>
+<p>Berhasil menyimpan model (model_svc.pkl) beserta scaler dan metadata lainnya, memastikan model dapat dimuat dengan cepat tanpa perlu training ulang.</p>
+<p><strong>Deployment Aplikasi:</strong></p>
+<p>Meluncurkan aplikasi Streamlit yang fungsional dan stabil di lingkungan online yang memungkinkan pengguna:</p>
+<ul class="simple">
+<li><p>Melihat metrik kinerja model secara instan.</p></li>
+<li><p>Memilih dan memprediksi satu sampel mobil secara real-time.</p></li>
+</ul>
+</section>
+<section id="tujuan-analsis">
+<h2>TUJUAN ANALSIS<a class="headerlink" href="#tujuan-analsis" title="Link to this heading">#</a></h2>
+<p><strong>Klasifikasi Multikelas:</strong></p>
+<p>Mencapai kemampuan untuk mengklasifikasikan data input yang tidak terlihat sebelumnya ke dalam salah satu dari empat kategori tipe mobil (Sedan, Pickup, Minivan, SUV).</p>
+<p><strong>Optimalisasi Kinerja:</strong></p>
+<p>Memastikan model mencapai metrik kinerja yang tinggi.</p>
+<ul class="simple">
+<li><p>Metrik Kunci: Akurasi harus berada pada tingkat yang dapat diterima, dan F1-Score (keseimbangan antara Precision dan Recall) harus tinggi untuk semua kelas (bukan hanya kelas mayoritas), menghindari bias klasifikasi.</p></li>
+</ul>
+<p><strong>Validasi Generalisasi:</strong></p>
+<p>Memastikan bahwa model yang dilatih pada data training dapat berkinerja baik dan stabil ketika diterapkan pada data uji (df_test) yang baru.</p>
+<p><strong>Interpretasi Fitur (Secondary Goal):</strong></p>
+<p>Secara tidak langsung, melalui visualisasi (grafik deret waktu fitur), tujuannya adalah memberikan pandangan sekilas kepada pengguna tentang profil data sampel yang sedang diprediksi, yang dapat membantu dalam verifikasi dan pemahaman mengapa prediksi tersebut dibuat.</p>
+</section>
+<section id="data-understanding-eksplorasi-data-eda">
+<h2>DATA UNDERSTANDING (Eksplorasi Data/EDA)<a class="headerlink" href="#data-understanding-eksplorasi-data-eda" title="Link to this heading">#</a></h2>
+<p>Dataset berasal dari UCR, berbentuk time series univariate dengan:</p>
+<ol class="arabic simple">
+<li><p>60 data train, 60 data test</p></li>
+<li><p>577 fitur (att1–att577)</p></li>
+<li><p>4 kelas (1–4 → Sedan, Pickup, Minivan, SUV)</p></li>
+<li><p>Format ARFF yaitu Car_TRAIN.arff (untuk pelatihan) dan Car_TEST.arff (untuk pengujian).</p></li>
+<li><p>Tipe Data Fitur	Semua fitur adalah numerik (float64) dan telah di-scale.</p></li>
+</ol>
+<p>Membaca semua kolom attN sebagai fitur dan kolom terakhir sebagai label. Data kemudian distandardisasi sebelum melatih model SVC (RBF).
+Visualisasi menampilkan nilai time series sesuai range att yang dipilih.</p>
+<section id="mengupload-data">
+<h3>Mengupload Data<a class="headerlink" href="#mengupload-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
+<span class="n">uploaded</span> <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">upload</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">uploaded</span> <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">upload</span><span class="p">()</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;google&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="load-data">
+<h3>Load Data<a class="headerlink" href="#load-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">arff</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">SVC</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+
+<span class="c1"># -------- fungsi load arff --------</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">load_arff</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Memuat data dari file ARFF ke dalam DataFrame, melakukan decoding byte</span>
+<span class="sd">    ke string, dan memetakan label kelas.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data</span><span class="p">,</span> <span class="n">meta</span> <span class="o">=</span> <span class="n">arff</span><span class="o">.</span><span class="n">loadarff</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="c1"># Decode byte → string untuk kolom object</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">([</span><span class="s1">&#39;object&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+
+    <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">meta</span><span class="o">.</span><span class="n">names</span><span class="p">()</span>
+
+    <span class="c1"># Mapping label kelas</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;1&#39;</span><span class="p">:</span> <span class="s1">&#39;Sedan&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;2&#39;</span><span class="p">:</span> <span class="s1">&#39;Pickup&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;3&#39;</span><span class="p">:</span> <span class="s1">&#39;Minivan&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;4&#39;</span><span class="p">:</span> <span class="s1">&#39;SUV&#39;</span>
+    <span class="p">}</span>
+
+    <span class="n">label_raw</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">label_raw</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">mapping</span><span class="p">)</span>
+
+    <span class="c1"># Identifikasi kolom fitur (yang dimulai dengan &#39;att&#39;)</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;att&quot;</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">df</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Tujuan:</strong></p>
+<p>Mengubah data mentah dari format khusus (.arff) menjadi struktur yang dapat diolah (Pandas DataFrame dan NumPy array).</p>
+<p><strong>Aksi Kunci:</strong></p>
+<p>Fungsi load_arff mengurus pembacaan file ARFF, decoding nilai byte menjadi string, dan memetakan label numerik (‘1’, ‘2’, dll.) ke nama kelas yang dapat dimengerti (‘Sedan’, ‘Pickup’, dll.).</p>
+</section>
+<section id="visualisasi-data">
+<h3>Visualisasi Data<a class="headerlink" href="#visualisasi-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ============= LOAD DATA =============</span>
+<span class="n">train_path</span> <span class="o">=</span> <span class="s2">&quot;/content/Car_TRAIN.arff&quot;</span>
+<span class="n">test_path</span>  <span class="o">=</span> <span class="s2">&quot;/content/Car_TEST.arff&quot;</span>
+
+<span class="n">df_train</span><span class="p">,</span> <span class="n">feature_cols</span><span class="p">,</span> <span class="n">target_col</span> <span class="o">=</span> <span class="n">load_arff</span><span class="p">(</span><span class="n">train_path</span><span class="p">)</span>
+<span class="n">df_test</span><span class="p">,</span>  <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">load_arff</span><span class="p">(</span><span class="n">test_path</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Shape Data Train: </span><span class="si">{</span><span class="n">df_train</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Shape Data Test: </span><span class="si">{</span><span class="n">df_test</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># 1. Distribusi Data (TARGET CLASS)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">target_col</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">,</span>
+              <span class="n">order</span><span class="o">=</span><span class="n">df_train</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribusi Kelas (Data Training)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tipe Mobil&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Jumlah Sampel&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Distribusi Fitur (Contoh Box Plot)</span>
+<span class="c1"># Memilih 4 fitur pertama sebagai contoh</span>
+<span class="n">selected_features</span> <span class="o">=</span> <span class="n">feature_cols</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">df_train_melt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">id_vars</span><span class="o">=</span><span class="n">target_col</span><span class="p">,</span> <span class="n">value_vars</span><span class="o">=</span><span class="n">selected_features</span><span class="p">,</span>
+                        <span class="n">var_name</span><span class="o">=</span><span class="s1">&#39;Feature&#39;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s1">&#39;Value&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Feature&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Value&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="n">target_col</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_train_melt</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Set2&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Box Plot Nilai Fitur Berdasarkan Kelas (Contoh)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Fitur&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Nilai&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Kelas&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shape Data Train: (60, 579)
+Shape Data Test: (60, 579)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipython-input-1163731385.py:14: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.countplot(x=target_col, data=df_train, palette=&quot;viridis&quot;,
+</pre></div>
+</div>
+<img alt="_images/b8700c94677bf40306655ae5fa15c2c44e7539d6c9a226952c4bf7adb9957377.png" src="_images/b8700c94677bf40306655ae5fa15c2c44e7539d6c9a226952c4bf7adb9957377.png" />
+<img alt="_images/4e93d64d8adbf382b3ef394b3ce338f07508049044d840dd6ecb87bed9a316d0.png" src="_images/4e93d64d8adbf382b3ef394b3ce338f07508049044d840dd6ecb87bed9a316d0.png" />
+</div>
+</div>
+<p><strong>Count Plot (Grafik Batang Frekuensi)</strong></p>
+<p>Untuk memeriksa apakah ada ketidakseimbangan kelas (class imbalance). Jika salah satu kelas memiliki jumlah sampel jauh lebih banyak atau lebih sedikit daripada yang lain, ini dapat memengaruhi pelatihan model.</p>
+<p><strong>Box Plot (Plot Kotak dan Sungut)</strong></p>
+<ul class="simple">
+<li><p>Melihat sebaran nilai (median, kuartil, dan range) untuk setiap fitur.</p></li>
+<li><p>Mengidentifikasi potensi nilai outlier (titik di luar whisker).</p></li>
+<li><p>Memeriksa apakah ada perbedaan diskriminatif pada fitur-fitur tersebut berdasarkan kelas mobil (misalnya, apakah nilai ‘att1’ untuk ‘Sedan’ secara signifikan lebih rendah daripada ‘SUV’).</p></li>
+</ul>
+</section>
+<section id="preprocessing-data">
+<h3>Preprocessing Data<a class="headerlink" href="#preprocessing-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ============= PREPROCESSING =============</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">feature_cols</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="n">feature_cols</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Standard Scaler</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X_train_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_test_scaled</span>  <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Pra-pemrosesan selesai. Data telah distandarisasi.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pra-pemrosesan selesai. Data telah distandarisasi.
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Fungsinya:</strong></p>
+<p>Melakukan Standardisasi (Scaling) fitur menggunakan StandardScaler. Tujuan dari langkah ini adalah untuk memastikan semua fitur memiliki skala yang seragam, yang sangat penting untuk kinerja optimal model SVC.</p>
+</section>
+<section id="pemodelan-data">
+<h3>Pemodelan Data<a class="headerlink" href="#pemodelan-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ============= MODEL SVC =============</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;rbf&#39;</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="s1">&#39;scale&#39;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Pelatihan Model SVC selesai.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pelatihan Model SVC selesai.
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Fungsinya:</strong></p>
+<p>Membuat sebuah objek model klasifikasi menggunakan Support Vector Machine (SVC) dari pustaka scikit-learn</p>
+</section>
+<section id="evaluasi">
+<h3>Evaluasi<a class="headerlink" href="#evaluasi" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ============= EVALUASI =============</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Hasil Evaluasi Kinerja ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Akurasi: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="w"> </span><span class="n">y_pred</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2"> %&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Classification Report:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Hasil Evaluasi Kinerja ---
+Akurasi: 70.0 %
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+     Minivan       0.83      0.53      0.65        19
+      Pickup       1.00      1.00      1.00        14
+         SUV       0.45      0.69      0.55        13
+       Sedan       0.64      0.64      0.64        14
+
+    accuracy                           0.70        60
+   macro avg       0.73      0.72      0.71        60
+weighted avg       0.74      0.70      0.71        60
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Fungsinya:</strong></p>
+<p>Mengukur seberapa baik model memprediksi data yang belum pernah dilihat (test data).</p>
+<p>Metode evaluasi yang digunakan:</p>
+<ol class="arabic">
+<li><p>Accuracy Score</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> Presentase prediksi benar.
+</pre></div>
+</div>
+</li>
+<li><p>Classification Report</p>
+<p>Berisi:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> - Precision → keakuratan prediksi positif
+
+ - Recall → kemampuan menemukan semua data positif
+
+ - F1-score → rata-rata precision dan recall
+
+ - Support → jumlah data per kelas
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="visualisasi-hasil-confusion-matrix-f1-score">
+<h3>Visualisasi Hasil (Confusion Matrix &amp; F1-Score)<a class="headerlink" href="#visualisasi-hasil-confusion-matrix-f1-score" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ============= CONFUSION MATRIX =============</span>
+<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">classes_</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Blues&quot;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;d&quot;</span><span class="p">,</span>
+            <span class="n">xticklabels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">yticklabels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Confusion Matrix&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Predicted Label&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Actual Label&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="c1"># ============= GRAFIK AKURASI PER KELAS =============</span>
+<span class="n">report</span> <span class="o">=</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">output_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Ambil hanya kelas (kecuali accuracy, macro avg, weighted avg)</span>
+<span class="n">class_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">report</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">,</span> <span class="s1">&#39;macro avg&#39;</span><span class="p">,</span> <span class="s1">&#39;weighted avg&#39;</span><span class="p">]]</span>
+
+<span class="n">accuracies</span> <span class="o">=</span> <span class="p">[</span><span class="n">report</span><span class="p">[</span><span class="n">c</span><span class="p">][</span><span class="s2">&quot;f1-score&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">class_names</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">class_names</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">accuracies</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;magma&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;F1-Score per Class&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;F1-Score&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Class&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/c920a8378e1ae54a45489939018be49611317454b173d8cdffcb33a6a3f0cad4.png" src="_images/c920a8378e1ae54a45489939018be49611317454b173d8cdffcb33a6a3f0cad4.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipython-input-1537763521.py:22: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.barplot(x=class_names, y=accuracies, palette=&quot;magma&quot;)
+</pre></div>
+</div>
+<img alt="_images/d990cf467806208eda2ab3cbdf379972dc07c49748170f4253947cb8c39bf4b2.png" src="_images/d990cf467806208eda2ab3cbdf379972dc07c49748170f4253947cb8c39bf4b2.png" />
+</div>
+</div>
+<p><strong>confusion_matrix</strong></p>
+<p>Memberikan tampilan terperinci mengenai hasil klasifikasi. Matriks ini menunjukkan berapa banyak sampel dari setiap kelas aktual yang diklasifikasikan dengan benar (nilai pada diagonal utama) dan berapa banyak yang salah diklasifikasikan ke kelas lain (nilai di luar diagonal).</p>
+<p><strong>F1-Score</strong></p>
+<p>metrik yang menggabungkan Precision dan Recall dan merupakan ukuran yang baik untuk kinerja model, terutama jika ada ketidakseimbangan kelas.</p>
+</section>
+</section>
+<section id="deployment">
+<h2><strong>DEPLOYMENT</strong><a class="headerlink" href="#deployment" title="Link to this heading">#</a></h2>
+<section id="struktur-file">
+<h3>Struktur File<a class="headerlink" href="#struktur-file" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://app.py">app.py</a>: Aplikasi utama Streamlit (antarmuka pengguna).</p></li>
+<li><p>load_data.py: Skrip untuk memuat data ARFF.</p></li>
+<li><p>model_svc.py: Skrip untuk melatih model SVC dan menyimpannya sebagai model_svc.pkl.</p></li>
+<li><p>Car_TRAIN.arff: Data pelatihan.</p></li>
+<li><p>Car_TEST.arff: Data pengujian.</p></li>
+<li><p>requirements.txt: Daftar pustaka yang dibutuhkan.</p></li>
+<li><p>model_svc.pkl: File model yang sudah dilatih (dihasilkan oleh model_svc.py).</p></li>
+</ul>
+</section>
+<section id="requirements-txt">
+<h3>requirements.txt<a class="headerlink" href="#requirements-txt" title="Link to this heading">#</a></h3>
+<p>perintah <strong>pip install -r requirements.txt</strong> adalah untuk menginstal semua pustaka (libraries/packages) Python yang dibutuhkan oleh proyek Anda secara otomatis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">streamlit</span>
+<span class="n">pandas</span>
+<span class="n">numpy</span>
+<span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
+<span class="n">scipy</span>
+<span class="n">altair</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="load-data-py">
+<h3>load_data.py<a class="headerlink" href="#load-data-py" title="Link to this heading">#</a></h3>
+<p>Tujuan Utama: Mengubah file data mentah berformat ARFF menjadi DataFrame Pandas yang siap diproses.</p>
+<ul class="simple">
+<li><p>Fungsi Kunci: Memuat data dari Car_TRAIN.arff dan Car_TEST.arff menggunakan scipy.io.arff.</p></li>
+<li><p>Preprocessing Data: Mengkonversi data yang berbentuk byte-string menjadi string biasa.</p></li>
+<li><p>Output: Mengembalikan DataFrame, daftar nama fitur, dan nama kolom target.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load_data.py</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">arff</span>
+
+<span class="c1"># Nama file train &amp; test</span>
+<span class="n">TRAIN_FILE_NAME</span> <span class="o">=</span> <span class="s2">&quot;Car_TRAIN.arff&quot;</span>
+<span class="n">TEST_FILE_NAME</span> <span class="o">=</span> <span class="s2">&quot;Car_TEST.arff&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_arff_data</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Load file ARFF dan konversi ke DataFrame pandas.</span>
+<span class="sd">    Mengembalikan: df, nama_label, fitur, raw</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">meta</span> <span class="o">=</span> <span class="n">arff</span><span class="o">.</span><span class="n">loadarff</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error membaca ARFF </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(),</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="c1"># Konversi byte-string -&gt; str</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="nb">object</span><span class="p">:</span>
+            <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
+
+    <span class="n">target</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>               <span class="c1"># kolom terakhir = label</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>   <span class="c1"># semua kecuali label</span>
+
+    <span class="k">return</span> <span class="n">df</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">meta</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="model-svc-py-pelatihan-model-penyimpanan">
+<h3>model_svc.py (Pelatihan Model &amp; Penyimpanan)<a class="headerlink" href="#model-svc-py-pelatihan-model-penyimpanan" title="Link to this heading">#</a></h3>
+<p>Tujuan Utama: Melatih model klasifikasi Support Vector Classifier (SVC) dan menyimpannya agar bisa digunakan di aplikasi web.</p>
+<ul class="simple">
+<li><p>Pemetaan Label: Mengubah label numerik (1, 2, 3, 4) menjadi nama mobil (Sedan, SUV, dll.).</p></li>
+<li><p>Preprocessing Penting: Melakukan Normalisasi (Scaling) fitur menggunakan StandardScaler. Ini wajib untuk model SVC.</p></li>
+<li><p>Pelatihan Model: Melatih model SVC (SVC(kernel=’rbf’)) menggunakan data yang sudah di-skala.</p></li>
+<li><p>Penyimpanan (.pkl): Menyimpan model SVC, StandardScaler, dan nama-nama kolom ke dalam satu file bernama model_svc.pkl menggunakan pickle.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">SVC</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">load_data</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_arff_data</span><span class="p">,</span> <span class="n">TRAIN_FILE_NAME</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># MAPPING LABEL</span>
+<span class="c1"># -------------------------------</span>
+<span class="c1"># Mengubah angka 1-4 menjadi nama mobil</span>
+<span class="n">label_map</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="s2">&quot;Sedan&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;2&quot;</span><span class="p">:</span> <span class="s2">&quot;Pickup&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;3&quot;</span><span class="p">:</span> <span class="s2">&quot;Minivan&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;4&quot;</span><span class="p">:</span> <span class="s2">&quot;SUV&quot;</span>
+<span class="p">}</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># LOAD DATA TRAINING</span>
+<span class="c1"># -------------------------------</span>
+<span class="c1"># Memuat dataset training dari file ARFF</span>
+<span class="n">df_train</span><span class="p">,</span> <span class="n">target_col</span><span class="p">,</span> <span class="n">feature_cols</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">load_arff_data</span><span class="p">(</span><span class="n">TRAIN_FILE_NAME</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># KONVERSI LABEL KE STRING</span>
+<span class="c1"># -------------------------------</span>
+<span class="c1"># Ubah kolom target menjadi string sesuai label_map</span>
+<span class="n">df_train</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">label_map</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># PERSIAPAN FITUR &amp; TARGET</span>
+<span class="c1"># -------------------------------</span>
+<span class="c1"># Ambil nilai fitur (X) dan target (y)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">feature_cols</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>  <span class="c1"># Fitur numerik</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>                  <span class="c1"># Target berupa string</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># SCALING / PREPROCESSING FITUR</span>
+<span class="c1"># -------------------------------</span>
+<span class="c1"># Normalisasi fitur agar memiliki mean=0 dan std=1</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># TRAIN MODEL SVC</span>
+<span class="c1"># -------------------------------</span>
+<span class="c1"># Membuat model Support Vector Classifier dengan kernel RBF</span>
+<span class="n">svc</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;rbf&#39;</span><span class="p">,</span> <span class="n">probability</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">svc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>  <span class="c1"># Training model dengan data yang sudah diskalakan</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># SIMPAN MODEL + PREPROCESSING</span>
+<span class="c1"># -------------------------------</span>
+<span class="c1"># Semua komponen penting disimpan dalam satu dictionary</span>
+<span class="n">model_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">svc</span><span class="p">,</span>           <span class="c1"># Model SVC terlatih</span>
+    <span class="s2">&quot;scaler&quot;</span><span class="p">:</span> <span class="n">scaler</span><span class="p">,</span>       <span class="c1"># Scaler untuk preprocessing fitur</span>
+    <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="n">feature_cols</span><span class="p">,</span>  <span class="c1"># Nama-nama fitur</span>
+    <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="n">target_col</span><span class="p">,</span>      <span class="c1"># Nama kolom target</span>
+    <span class="s2">&quot;df_test&quot;</span><span class="p">:</span> <span class="n">df_train</span>        <span class="c1"># Test dataset (sama dengan train di sini)</span>
+<span class="p">}</span>
+
+<span class="c1"># Simpan dictionary ke file pickle</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;model_svc.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">model_dict</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ DONE! Model siap digunakan&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="app-py-aplikasi-streamlit-interaktif">
+<h3><a class="reference external" href="http://app.py">app.py</a> (Aplikasi Streamlit Interaktif)<a class="headerlink" href="#app-py-aplikasi-streamlit-interaktif" title="Link to this heading">#</a></h3>
+<p>Tujuan Utama: Membuat antarmuka web yang menampilkan evaluasi model dan memungkinkan pengguna melakukan prediksi sampel mobil.</p>
+<ul class="simple">
+<li><p>Pemuatan Awal: Membaca file model_svc.pkl dan mengekstrak model dan scaler yang tersimpan.</p></li>
+<li><p>Evaluasi Model: Menampilkan akurasi dan Classification Report model berdasarkan data uji (df_test).</p></li>
+<li><p>Prediksi Interaktif:</p>
+<ul>
+<li><p>Memungkinkan pengguna memilih sampel data dari dropdown.</p></li>
+<li><p>Mengambil fitur sampel, melakukan scaling dengan scaler yang tersimpan, dan memprediksi tipe mobil.</p></li>
+<li><p>Menampilkan hasil prediksi model dan label asli sampel.</p></li>
+</ul>
+</li>
+<li><p>Visualisasi: Membuat grafik deret waktu menggunakan Altair untuk memvisualisasikan nilai-nilai fitur dari sampel mobil yang dipilih.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">streamlit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">st</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">altair</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">alt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">classification_report</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># LOAD MODEL</span>
+<span class="c1"># -------------------------------</span>
+<span class="n">MODEL_PATH</span> <span class="o">=</span> <span class="s2">&quot;model_svc.pkl&quot;</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Load model, scaler, fitur, target, dan dataset test</span>
+    <span class="n">model_data</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">MODEL_PATH</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">))</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">model_data</span><span class="p">[</span><span class="s2">&quot;model&quot;</span><span class="p">]</span>          <span class="c1"># Model SVC</span>
+    <span class="n">scaler</span> <span class="o">=</span> <span class="n">model_data</span><span class="p">[</span><span class="s2">&quot;scaler&quot;</span><span class="p">]</span>        <span class="c1"># Scaler untuk normalisasi</span>
+    <span class="n">saved_features</span> <span class="o">=</span> <span class="n">model_data</span><span class="p">[</span><span class="s2">&quot;features&quot;</span><span class="p">]</span>  <span class="c1"># Nama-nama fitur</span>
+    <span class="n">saved_target</span> <span class="o">=</span> <span class="n">model_data</span><span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">]</span>      <span class="c1"># Nama kolom target</span>
+    <span class="n">df_test</span> <span class="o">=</span> <span class="n">model_data</span><span class="p">[</span><span class="s2">&quot;df_test&quot;</span><span class="p">]</span>      <span class="c1"># Data test</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&quot;🟢 model_svc.pkl berhasil dimuat!&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Gagal load model: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># APP TITLE</span>
+<span class="c1"># -------------------------------</span>
+<span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;🚗 Prediksi Tipe Mobil&quot;</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># EVALUASI MODEL</span>
+<span class="c1"># -------------------------------</span>
+<span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;📊 Evaluasi Model&quot;</span><span class="p">)</span>
+
+<span class="c1"># Ambil fitur dan lakukan scaling</span>
+<span class="n">X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df_test</span><span class="p">[</span><span class="n">saved_features</span><span class="p">])</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="n">saved_target</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Prediksi seluruh data test</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
+
+<span class="c1"># Hitung akurasi</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="p">(</span><span class="n">y_test</span> <span class="o">==</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">st</span><span class="o">.</span><span class="n">metric</span><span class="p">(</span><span class="s2">&quot;Akurasi Data Uji&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">accuracy</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+
+<span class="c1"># Confusion report / classification report dalam bentuk dataframe</span>
+<span class="n">report</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">output_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+<span class="n">st</span><span class="o">.</span><span class="n">dataframe</span><span class="p">(</span><span class="n">report</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># DATA TEST HEAD</span>
+<span class="c1"># -------------------------------</span>
+<span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;📄 Data Uji (head)&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">dataframe</span><span class="p">(</span><span class="n">df_test</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>  <span class="c1"># Menampilkan 5 baris pertama dataset test</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># PREDIKSI PER SAMPEL</span>
+<span class="c1"># -------------------------------</span>
+<span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;1️⃣ Prediksi Sampel Mobil&quot;</span><span class="p">)</span>
+
+<span class="c1"># Membagi layout: kolom kiri untuk select box, kolom kanan untuk hasil prediksi</span>
+<span class="n">col1</span><span class="p">,</span> <span class="n">col2</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># Pilih sampel berdasarkan index</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">col1</span><span class="o">.</span><span class="n">selectbox</span><span class="p">(</span><span class="s2">&quot;Pilih ID Sampel&quot;</span><span class="p">,</span> <span class="n">df_test</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_list</span><span class="p">())</span>
+<span class="n">selected</span> <span class="o">=</span> <span class="n">df_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+<span class="c1"># Ambil fitur sampel dan ubah ke array 2D</span>
+<span class="n">X_sample</span> <span class="o">=</span> <span class="n">selected</span><span class="p">[</span><span class="n">saved_features</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Prediksi model untuk sampel ini</span>
+<span class="n">pred_label</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_sample</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Label asli dari dataset</span>
+<span class="n">true_label</span> <span class="o">=</span> <span class="n">selected</span><span class="p">[</span><span class="n">saved_target</span><span class="p">]</span>
+
+<span class="c1"># Tampilkan hasil prediksi dan label asli</span>
+<span class="k">with</span> <span class="n">col2</span><span class="p">:</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;### Prediksi Model: 🚘 **</span><span class="si">{</span><span class="n">pred_label</span><span class="si">}</span><span class="s2">**&quot;</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;### Label Asli: 🏷️ **</span><span class="si">{</span><span class="n">true_label</span><span class="si">}</span><span class="s2">**&quot;</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># GRAFIK TIME SERIES</span>
+<span class="c1"># -------------------------------</span>
+<span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;2️⃣ Grafik Deret Waktu Fitur Mobil&quot;</span><span class="p">)</span>
+
+<span class="c1"># Input untuk memilih range fitur yang ingin ditampilkan</span>
+<span class="n">col3</span><span class="p">,</span> <span class="n">col4</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">col3</span><span class="o">.</span><span class="n">number_input</span><span class="p">(</span><span class="s2">&quot;Mulai fitur ke-&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">saved_features</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">col4</span><span class="o">.</span><span class="n">number_input</span><span class="p">(</span><span class="s2">&quot;Sampai fitur ke-&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">saved_features</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">saved_features</span><span class="p">))</span>
+
+<span class="c1"># Jika range valid, buat chart</span>
+<span class="k">if</span> <span class="n">start</span> <span class="o">&lt;=</span> <span class="n">end</span><span class="p">:</span>
+    <span class="n">feats</span> <span class="o">=</span> <span class="n">saved_features</span><span class="p">[</span><span class="n">start</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>  <span class="c1"># Ambil nama fitur sesuai range</span>
+    <span class="n">df_plot</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s2">&quot;Langkah Waktu&quot;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="s2">&quot;Nilai Fitur&quot;</span><span class="p">:</span> <span class="n">selected</span><span class="p">[</span><span class="n">feats</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+    <span class="p">})</span>
+    <span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">df_plot</span><span class="p">)</span><span class="o">.</span><span class="n">mark_line</span><span class="p">(</span><span class="n">point</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Langkah Waktu&quot;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Nilai Fitur&quot;</span><span class="p">,</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Langkah Waktu&quot;</span><span class="p">,</span> <span class="s2">&quot;Nilai Fitur&quot;</span><span class="p">]</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;📈 Grafik Deret Waktu Fitur Mobil&quot;</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+
+    <span class="n">st</span><span class="o">.</span><span class="n">altair_chart</span><span class="p">(</span><span class="n">chart</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;stretch&#39;</span><span class="p">)</span>
+
+<span class="c1"># -------------------------------</span>
+<span class="c1"># DETAIL DATA SAMPEL</span>
+<span class="c1"># -------------------------------</span>
+<span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;3️⃣ Detail Data Sampel&quot;</span><span class="p">)</span>
+
+<span class="c1"># Expander untuk melihat semua detail kolom sampel</span>
+<span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">expander</span><span class="p">(</span><span class="s2">&quot;Klik untuk melihat detail&quot;</span><span class="p">):</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">dataframe</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">selected</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>  <span class="c1"># Transpose agar kolom menjadi row</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="link-deploy">
+<h2>LINK DEPLOY<a class="headerlink" href="#link-deploy" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://ameliasafitri-23-039-project-uas.streamlit.app/">https://ameliasafitri-23-039-project-uas.streamlit.app/</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="DTW.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Dynamic Time Wrapping</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-dataset"><strong>PENJELASAN DATASET</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#business-undertanding">BUSINESS UNDERTANDING</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-proyek">TUJUAN PROYEK</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-analsis">TUJUAN ANALSIS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-understanding-eksplorasi-data-eda">DATA UNDERSTANDING (Eksplorasi Data/EDA)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengupload-data">Mengupload Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data">Visualisasi Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data">Preprocessing Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pemodelan-data">Pemodelan Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi">Evaluasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-hasil-confusion-matrix-f1-score">Visualisasi Hasil (Confusion Matrix &amp; F1-Score)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment"><strong>DEPLOYMENT</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#struktur-file">Struktur File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-txt">requirements.txt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data-py">load_data.py</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-svc-py-pelatihan-model-penyimpanan">model_svc.py (Pelatihan Model &amp; Penyimpanan)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app-py-aplikasi-streamlit-interaktif">app.py (Aplikasi Streamlit Interaktif)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#link-deploy">LINK DEPLOY</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Amelia Safitri
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
