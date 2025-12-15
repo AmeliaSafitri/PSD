@@ -391,6 +391,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-dataset"><strong>PENJELASAN DATASET</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-pengukuran-577-atribut-secara-spesifik"><strong>Cara Pengukuran 577 Atribut (Secara Spesifik)</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#business-undertanding">BUSINESS UNDERTANDING</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-proyek">TUJUAN PROYEK</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-analsis">TUJUAN ANALSIS</a></li>
@@ -458,6 +459,56 @@ document.write(`
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                                                                                                                                                                 |
 </pre></div>
 </div>
+<p><img alt="alt text" src="_images/image.png" /></p>
+</section>
+<section id="cara-pengukuran-577-atribut-secara-spesifik">
+<h2><strong>Cara Pengukuran 577 Atribut (Secara Spesifik)</strong><a class="headerlink" href="#cara-pengukuran-577-atribut-secara-spesifik" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Proses Akuisisi Awal: Video dan
+Garis Luar (Outline)</p>
+<ul class="simple">
+<li><p>Asal Data: Pengukuran diambil dari rekaman video lalu lintas.</p></li>
+<li><p>Langkah Komputer: mengidentifikasi objek mobil dan kemudian mengekstrak Garis Luar (Outline) atau Kontur bentuk mobil dari frame video tersebut</p></li>
+<li><p>Hasil: Pada titik ini, yang dimiliki adalah bentuk 2D (dua dimensi) dari profil mobil.</p></li>
+</ul>
+</li>
+<li><p>Menemukan Titik Pusat (Centroid Calculation)</p>
+<ul class="simple">
+<li><p>Setelah profil 2D mobil diisolasi dan dinormalisasi, komputer harus menentukan Titik Pusat Geometri (Centroid) dari bentuk tersebut.</p></li>
+<li><p>Titik ini akan berfungsi sebagai titik referensi tetap (titik 0,0) untuk semua pengukuran. Ini penting agar pengukuran tidak berubah jika mobil sedikit bergeser posisinya.</p></li>
+</ul>
+</li>
+<li><p>Membagi Lingkaran Menjadi 577 Sektor (Angular Sampling)</p>
+<ul class="simple">
+<li><p>membayangkan sebuah lingkaran penuh (360 derajat) yang berpusat di Centroid yang telah ditemukan.</p></li>
+<li><p>Lingkaran ini kemudian dibagi menjadi 577 sudut atau interval yang sama persis (360 derajat/577).</p></li>
+<li><p>Setiap pembagian sudut ini akan menghasilkan garis lurus yang memancar dari titik pusat ke garis luar mobil.</p></li>
+</ul>
+</li>
+<li><p>Pengukuran Jarak (Distance Measurement)</p>
+<ul class="simple">
+<li><p>Mulai dari sudut pertama (yang akan menjadi att1), komputer melakukan pengukuran:</p>
+<ul>
+<li><p>Jarak diukur dari Titik Pusat (Centroid) hingga ke Garis Luar (Kontur) mobil di sepanjang garis sudut pertama tersebut.</p></li>
+<li><p>Nilai jarak ini disimpan sebagai att1.</p></li>
+</ul>
+</li>
+<li><p>Proses ini diulang untuk sudut kedua (yang menjadi att2), sudut ketiga (att3), dan seterusnya, hingga sudut ke-577 (att557)</p></li>
+</ul>
+</li>
+<li><p>Menghasilkan Deret 1D</p>
+<ul class="simple">
+<li><p>Komputer kini memiliki urutan 577 angka yang bermakna secara geometris.</p>
+<ul>
+<li><p>Nilai Jarak Pendek (misalnya att(i) bernilai kecil) menunjukkan bagian mobil yang dekat dengan pusat (biasanya bagian bawah atau kap mesin rendah).</p></li>
+<li><p>Nilai Jarak Panjang (misalnya att(j) bernilai besar) menunjukkan bagian mobil yang jauh dari pusat (biasanya bagian atap tinggi atau bumper).</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Kesimpulan</strong></p>
+<p>Setiap angka dari att1 sampai att577 adalah Jarak dari pusat mobil ke garis luarnya, yang diukur secara berurutan mengelilingi seluruh profil 2D. Deret angka ini menjadi input bagi Model SVC untuk mendeteksi pola bentuk.</p>
 </section>
 <section id="business-undertanding">
 <h2>BUSINESS UNDERTANDING<a class="headerlink" href="#business-undertanding" title="Link to this heading">#</a></h2>
@@ -1165,6 +1216,7 @@ Passing `palette` without assigning `hue` is deprecated and will be removed in v
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-dataset"><strong>PENJELASAN DATASET</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-pengukuran-577-atribut-secara-spesifik"><strong>Cara Pengukuran 577 Atribut (Secara Spesifik)</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#business-undertanding">BUSINESS UNDERTANDING</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-proyek">TUJUAN PROYEK</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-analsis">TUJUAN ANALSIS</a></li>
